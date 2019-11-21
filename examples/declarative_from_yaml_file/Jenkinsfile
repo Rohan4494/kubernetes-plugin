@@ -1,5 +1,5 @@
 pipeline {
-  agent {
+  agent { label = 'helm-deploy-slave'} {
     kubernetes {
       yamlFile 'examples/declarative_from_yaml_file/KubernetesPod.yaml'
     }
